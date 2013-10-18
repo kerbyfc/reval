@@ -118,3 +118,5 @@
        (if jar#
          (load-jar-resources jar-path# ~path filenames#)
          (load-local-resources ~path filenames#)))))
+
+(defn -main [] ())
