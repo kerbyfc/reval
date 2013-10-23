@@ -148,7 +148,7 @@
   Note: doesn't work with clojure namespace"
   [ns inner-path & initer]
   `(do
-     (def root# (locate-application-root ~ns))
+     (def root# (locate-application-root *ns*))
      (binding [*ns* *ns*]
        (in-ns ~ns)
        (refer-clojure)
@@ -156,4 +156,3 @@
        (if (jar? root#)
          (load-jar-inner-resource-dir root# ~inner-path)
          (load-local-resources ~inner-path)))))
-
