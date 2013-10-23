@@ -1,4 +1,4 @@
-(defproject reval "0.1.0-SNAPSHOT"
+(defproject reval "0.1.1-SNAPSHOT"
   :description "Resource files executor for clojure applications"
   :url "https://github.com/kerbyfc/reval"
   :license {:name "Eclipse Public License"
