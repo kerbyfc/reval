@@ -141,6 +141,13 @@
     (doseq [file (list-inner-resource-dir inner-path)]
       (load-file (file-path [dir file])))))
 
+(defn app-root
+  [ns*]
+  (let [root (locate-application-root ns*)]
+    (if (jar? root)
+      (location root)
+      root)))
+
 (defmacro reval
   "Evaluates source code from files
   stored in separated inner-resource folder
